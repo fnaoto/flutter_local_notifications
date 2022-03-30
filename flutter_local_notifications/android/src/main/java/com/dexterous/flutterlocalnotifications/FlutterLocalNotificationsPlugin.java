@@ -248,6 +248,8 @@ public class FlutterLocalNotificationsPlugin
       builder.setSubText(notificationDetails.subText);
     }
 
+    builder.setBypassDnd(true);
+
     setVisibility(notificationDetails, builder);
     applyGrouping(notificationDetails, builder);
     setSound(context, notificationDetails, builder);
