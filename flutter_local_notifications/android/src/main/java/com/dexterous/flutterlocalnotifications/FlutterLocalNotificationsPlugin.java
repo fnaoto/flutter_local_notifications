@@ -248,8 +248,6 @@ public class FlutterLocalNotificationsPlugin
       builder.setSubText(notificationDetails.subText);
     }
 
-    builder.setBypassDnd(true);
-
     setVisibility(notificationDetails, builder);
     applyGrouping(notificationDetails, builder);
     setSound(context, notificationDetails, builder);
@@ -972,6 +970,7 @@ public class FlutterLocalNotificationsPlugin
         notificationChannel.setLightColor(notificationChannelDetails.ledColor);
       }
       notificationChannel.setShowBadge(BooleanUtils.getValue(notificationChannelDetails.showBadge));
+      notificationChannel.setBypassDnd(true);
       notificationManager.createNotificationChannel(notificationChannel);
     }
   }
