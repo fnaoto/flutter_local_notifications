@@ -971,6 +971,7 @@ public class FlutterLocalNotificationsPlugin
       }
       notificationChannel.setShowBadge(BooleanUtils.getValue(notificationChannelDetails.showBadge));
       notificationChannel.setBypassDnd(true);
+      notificationChannel.setImportance(notificationChannelDetails.importance);
       notificationManager.createNotificationChannel(notificationChannel);
     }
   }
